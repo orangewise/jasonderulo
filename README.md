@@ -14,6 +14,31 @@ npm i jasonderulo
 ```
 
 
+# Examples
+
+## Basic transformation
+
+```javascript
+var jasonderulo = require('jasonderulo')
+
+var from = {
+  a: {
+    B: {
+      c: 'value c'
+    }
+  }
+}
+var transformation = {
+  targetProp: 'a.B.c'
+}
+
+console.log(jasonderulo.basicTransform(from, transformation))
+
+// { targetProp: 'value c' }
+
+```
+
+
 [npm-badge]: https://badge.fury.io/js/jasonderulo.svg
 [npm-url]: https://badge.fury.io/js/jasonderulo
 [travis-badge]: https://travis-ci.org/orangewise/jasonderulo.svg?branch=master
